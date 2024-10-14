@@ -1,6 +1,7 @@
 import requests
 from services import jcdecaux as jcd
 
+# Fonction : récupération des données de toutes les stations vélos à l'instant t
 def recup_stations():
     url=jcd.api_base_url + "stations?contract="+ jcd.contrat + "&apiKey=" + jcd.key
     response = requests.get(url)
