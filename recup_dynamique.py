@@ -16,11 +16,11 @@ def recup_stats_station(num_station):
             "dispo_velos" : stat_station['mainStands']['availabilities']['bikes'],
             "dispo_stands" : stat_station['mainStands']['availabilities']['stands']
         }
-        print(station)
+        return station
     else:
         print("Récup stats station :", num_station, "- Erreur:", response.status_code)
 
-def recup_nums_station():
+def recup_stations():
     url=jcd.api_base_url + "stations?contract="+ jcd.contrat + "&apiKey=" + jcd.key
     response = requests.get(url)
     if response.status_code == 200:
@@ -37,8 +37,6 @@ def recup_nums_station():
             "dispo_stands" : stat_station['mainStands']['availabilities']['stands']
             }
             stations.append(station)
-        print(stations)
+        return stations
     else:
         print("Erreur:", response.status_code)
-
-print(recup_nums_station())
