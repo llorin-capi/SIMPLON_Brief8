@@ -19,7 +19,7 @@ def couleur_occupation(score):
     else :
         return 'purple'
     
-stations=recup.recup_nums_station()
+stations=recup.recup_stations()
 
 # Ajouter les stations à la carte
 for station in stations :
