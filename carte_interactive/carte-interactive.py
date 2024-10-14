@@ -1,32 +1,34 @@
 import osmnx as ox
 import folium
 import pandas as pd
+import recup_dynamique as recup
 
-# Étape 1 : Télécharger le graphe de Nancy
-city = "Nancy, France"
-
-# Étape 2 : Lire le fichier CSV
-stations_df = pd.read_csv('C:/Users/Utilisateur/SIMPLON_Brief8/carte_interactive/nancy.csv')  
-
-# Vérifiez les colonnes et le contenu
-print(stations_df)  # Affiche les premières lignes du DataFrame
-print(stations_df.columns)  # Affiche les noms des colonnes
-
-# Supprimer les espaces dans les noms des colonnes
-stations_df.columns = stations_df.columns.str.strip()
-
-# Étape 3 : Créer une liste de stations à partir du DataFrame
-stations = stations_df.to_dict(orient='records')
 
 # Étape 4 : Créer une carte interactive avec Folium
 map_center = [48.6921, 6.1847]  # coordonnées GPS de Nancy avec Latitude et longitude
 m = folium.Map(location=map_center, zoom_start=14)
 
-# Étape 5 : Ajouter les stations à la carte
-for station in stations:
+# Couleurs taux d'occupation
+def couleur_occupation(score):
+    if score < 0.15:
+        return 'red'
+    elif 0.15 <= score < 0.35:
+        return 'orange'
+    elif 0.35 <= score < 0.70:
+        return 'green'
+    else :
+        return 'purple'
+    
+stations=recup.recup_nums_station()
+
+# Ajouter les stations à la carte
+for station in stations :
+    occupation=station['dispo_velos']/station['capacite']
+    print(occupation)
     folium.Marker(
-        location=[station["Latitude"], station["Longitude"]],
-        popup=station["Name"],
+        location=[station["latitude"], station["longitude"]],
+        popup=station["nom"],
+        icon=folium.Icon(color=couleur_occupation(occupation))
     ).add_to(m)
 
 # Sauvegarder la carte
