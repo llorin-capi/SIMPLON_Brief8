@@ -4,7 +4,6 @@ import pandas as pd
 
 # Étape 1 : Télécharger le graphe de Nancy
 city = "Nancy, France"
-graph = ox.graph_from_place(city, network_type='walk')
 
 # Étape 2 : Lire le fichier CSV
 stations_df = pd.read_csv('C:/Users/Utilisateur/SIMPLON_Brief8/carte_interactive/nancy.csv')  
@@ -20,7 +19,7 @@ stations_df.columns = stations_df.columns.str.strip()
 stations = stations_df.to_dict(orient='records')
 
 # Étape 4 : Créer une carte interactive avec Folium
-map_center = [48.6921, 6.1847]  
+map_center = [48.6921, 6.1847]  # coordonnées GPS de Nancy avec Latitude et longitude
 m = folium.Map(location=map_center, zoom_start=14)
 
 # Étape 5 : Ajouter les stations à la carte
@@ -32,3 +31,4 @@ for station in stations:
 
 # Sauvegarder la carte
 m.save('map_nancy.html')
+
