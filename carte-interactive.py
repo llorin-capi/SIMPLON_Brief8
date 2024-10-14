@@ -3,12 +3,11 @@ import folium
 import pandas as pd
 import recup_dynamique as recup
 
-
-# Étape 4 : Créer une carte interactive avec Folium
-map_center = [48.6921, 6.1847]  # coordonnées GPS de Nancy avec Latitude et longitude
+# Création de la carte interactive avec Folium
+map_center = [48.6921, 6.1847]  # coordonnées GPS de Nancy
 m = folium.Map(location=map_center, zoom_start=14)
 
-# Couleurs taux d'occupation
+# Couleurs selon le taux d'occupation
 def couleur_occupation(score):
     if score < 0.15:
         return 'red'
@@ -18,10 +17,13 @@ def couleur_occupation(score):
         return 'green'
     else :
         return 'purple'
-    
+
+# Création de la légende de la carte
+
+# Récupération des données des stations
 stations=recup.recup_stations()
 
-# Ajouter les stations à la carte
+# Ajout des stations à la carte
 for station in stations :
     occupation=station['dispo_velos']/station['capacite']
     print(occupation)
@@ -31,6 +33,6 @@ for station in stations :
         icon=folium.Icon(color=couleur_occupation(occupation))
     ).add_to(m)
 
-# Sauvegarder la carte
+# Sauvegarde de la carte
 m.save('map_nancy.html')
 
