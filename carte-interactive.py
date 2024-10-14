@@ -1,5 +1,9 @@
 import folium
 import pandas as pd
+import geopy
+import certifi
+import ssl
+from geopy.geocoders import Nominatim
 from services import jcdecaux_services as jcds
 
 
