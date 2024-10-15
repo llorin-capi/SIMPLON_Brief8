@@ -7,9 +7,17 @@ L'objectif de ce projet est de  développer une interface interactive pour visua
 
 
 ##  Pré-requis
+* Python 3.12.6, avec les librairies du fichier [requirements](requirements.txt) installées
 
 ## Instructions
+* Exécuter le script carte-interactive.py
+* Ouvrir le fichier map-nancy.html dans un navigateur
 
 ## Résultat
 
+
 ## Auteurs
+* Daria
+* Léa Lorin (@llorin-capi)
+* Théo Virbel (@Theo-virbel)
+* Serge Pfeiffer (@DahliaNoir71)
