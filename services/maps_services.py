@@ -1,5 +1,6 @@
 import folium
-import osmnx
+import osmnx as ox
+import networkx as nx
 from typing import Tuple, Dict, List
 
 DEFAULT_COUNTRY = "France"
@@ -11,7 +12,17 @@ def get_osmnx_graph(city_location: str):
     :param city_location: The geographical location in the form of a string, representing the city or place for which the OSMnx graph is to be retrieved.
     :return: A graph object representing the street network of the specified city or place, which is obtained using OSMnx's graph_from_place function.
     """
-    return osmnx.graph_from_place(city_location, network_type="drive")
+    graph = ox.graph_from_place(city_location, network_type="drive")
+
+
+    return graph
+
+
+
+
+
+
+
 
 
 def get_city_center(edges) -> List[float]:
@@ -47,7 +58,7 @@ def get_centered_map(city: str, country: str = DEFAULT_COUNTRY) -> folium.Map:
     """
     city_location = f"{city}, {country}"
     city_graph = get_osmnx_graph(city_location)
-    nodes, edges = osmnx.graph_to_gdfs(city_graph)
+    nodes, edges = ox.graph_to_gdfs(city_graph)
 
     city_center = get_city_center(edges)
     centered_map = create_folium_map(city_center)
@@ -55,7 +66,7 @@ def get_centered_map(city: str, country: str = DEFAULT_COUNTRY) -> folium.Map:
     return centered_map
 
 
-def get_occupation_color(score: float) -> str:
+def get_score_color(score: float) -> str:
     """
     :param score: A floating-point number representing a score.
     :return: A string representing a color based on the score's value.
@@ -78,10 +89,10 @@ def add_locations_to_map(map_object: folium.Map, locations: List[Dict[str, any]]
     :return: The updated folium Map object with added location markers
     """
     for location in locations:
-        occupation = location['dispo_velos'] / location['capacite']
+        disponibility = location['dispo_velos'] / location['capacite']
         folium.Marker(
             location=[location["latitude"], location["longitude"]],
             popup=location["nom"],
-            icon=folium.Icon(color=get_occupation_color(occupation))
+            icon=folium.Icon(color=get_score_color(disponibility))
         ).add_to(map_object)
     return map_object
