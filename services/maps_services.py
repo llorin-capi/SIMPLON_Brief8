@@ -70,6 +70,6 @@ def add_locations_to_map(map_object: folium.Map, locations: List[Dict[str, any]]
         folium.Marker(
             location=[location["latitude"], location["longitude"]],
             popup=location["nom"],
-            icon = folium.Icon(color=get_occupation_color(occupation)
-        ).add_to(map_object))
+            icon=folium.Icon(color=get_occupation_color(occupation))
+        ).add_to(map_object)
     map_object.save('map_locations.html')
