@@ -3,8 +3,8 @@
 ## Objectif
 L'objectif de ce projet est de  développer une interface interactive pour visualiser et optimiser l'utilisation des stations de vélos partagés à Nancy, en intégrant des données en temps réel et en proposant un système de récompenses pour encourager le rééquilibrage des vélos aux stations par les utilisateurs.
 
-## Modélisation
-
+## Modélisation de la solution
+[modele](diagramme.drawio)
 
 ##  Pré-requis
 * Python 3.12.6, avec les librairies du fichier [requirements](requirements.txt) installées
