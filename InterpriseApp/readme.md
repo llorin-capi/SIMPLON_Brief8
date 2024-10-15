@@ -25,7 +25,7 @@ You can install the required packages using pip:
 
 ```bash
 pip install streamlit pandas folium streamlit-folium networkx pulp osmnx
-
+```
 ## Data
 The application expects a CSV file named data_statique_clean01.csv in the data directory with the following columns:
 
