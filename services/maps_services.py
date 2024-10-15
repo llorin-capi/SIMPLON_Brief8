@@ -52,8 +52,6 @@ def get_centered_map(city: str, country: str = DEFAULT_COUNTRY) -> folium.Map:
     city_center = get_city_center(edges)
     centered_map = create_folium_map(city_center)
 
-    #add_geojson_to_map(edges, centered_map)
-
     return centered_map
 
 
