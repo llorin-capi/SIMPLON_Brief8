@@ -8,7 +8,11 @@ from typing import Tuple, Dict, List
 
 def setup_ssl_context() -> None:
     """
-    Sets up the SSL context for geopy using certifi.
+    Sets up the SSL context required for secure communication by creating a default context
+    using certificates from `certifi`. The context is then set as the default SSL context
+    for `geopy.geocoders`.
+
+    :return: None
     """
     ssl_context = ssl.create_default_context(cafile=certifi.where())
     geopy.geocoders.options.default_ssl_context = ssl_context
@@ -16,11 +20,9 @@ def setup_ssl_context() -> None:
 
 def fetch_gps_coordinates(city: str, country: str = "France") -> Tuple[float, float]:
     """
-    Fetches the GPS coordinates for a specified city and country.
-
-    :param city: The name of the city to geocode.
-    :param country: The country where the city is located. Defaults to "France".
-    :return: A tuple containing the latitude and longitude of the specified city.
+    :param city: Name of the city to fetch GPS coordinates for.
+    :param country: Name of the country, defaults to "France".
+    :return: Tuple containing the latitude and longitude of the city.
     """
     setup_ssl_context()
     geolocator = Nominatim(user_agent="my_geocoder")
@@ -31,11 +33,9 @@ def fetch_gps_coordinates(city: str, country: str = "France") -> Tuple[float, fl
 
 def get_centered_map(latitude: float, longitude: float) -> folium.Map:
     """
-    Returns a folium Map object centered at the given latitude and longitude.
-
-    :param latitude: Geographic coordinate that specifies the north-south position.
-    :param longitude: Geographic coordinate that specifies the east-west position.
-    :return: A folium Map object centered at the given latitude and longitude.
+    :param latitude: Latitude coordinate around which the map should be centered.
+    :param longitude: Longitude coordinate around which the map should be centered.
+    :return: A Folium map object centered at the specified latitude and longitude.
     """
     map_center = [latitude, longitude]
     centered_map = folium.Map(location=map_center, zoom_start=14)
@@ -44,10 +44,9 @@ def get_centered_map(latitude: float, longitude: float) -> folium.Map:
 
 def add_locations_to_map(map_object: folium.Map, locations: List[Dict[str, any]]) -> None:
     """
-    Adds location markers to an existing folium Map object.
-
-    :param map_object: A folium Map object to which the locations will be added.
-    :param locations: A list of location dictionaries containing latitude, longitude, and name.
+    :param map_object: The folium Map object to which the locations will be added.
+    :param locations: A list of dictionaries, each containing the latitude, longitude, and name of a location to be added to the map.
+    :return: None
     """
     for location in locations:
         folium.Marker(
