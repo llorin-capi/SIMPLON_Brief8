@@ -29,8 +29,8 @@ def recup_stations():
             station={
             "numero" : stat_station['number'],
             "nom" : stat_station['name'],
-            "latitude" : stat_station['position']['latitude'],
-            "longitude" : stat_station['position']['longitude'],
+            "latitude" : stat_station['position']['latitude'], #toujours float? besoin formattage?
+            "longitude" : stat_station['position']['longitude'], #toujours float? besoin formattage?
             "statut" : stat_station['status'],
             "capacite" : stat_station['mainStands']['capacity'],
             "dispo_velos" : stat_station['mainStands']['availabilities']['bikes'],
