@@ -89,10 +89,10 @@ def add_locations_to_map(map_object: folium.Map, locations: List[Dict[str, any]]
     :return: The updated folium Map object with added location markers
     """
     for location in locations:
-        disponibility = location['dispo_velos'] / location['capacite']
+        availability = location['dispo_velos'] / location['capacite']
         folium.Marker(
             location=[location["latitude"], location["longitude"]],
             popup=location["nom"],
-            icon=folium.Icon(color=get_score_color(disponibility))
+            icon=folium.Icon(color=get_score_color(availability))
         ).add_to(map_object)
     return map_object
