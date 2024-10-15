@@ -8,9 +8,9 @@ API_KEY = "0268e4acb8b862e790cbd23dd89798630c94d0e6"
 
 def build_api_url(contract_city, api_key):
     """
-    :param contract_city: The name of the city where the contract is executed.
-    :param api_key: The API key for authentication.
-    :return: The complete URL for accessing the station information API for the specified city and API key.
+    :param contract_city: The name of the city for which the API URL is being constructed.
+    :param api_key: The API key for accessing the data.
+    :return: Constructed API URL string.
     """
     return f"{API_BASE_URL}stations?contract={contract_city}&apiKey={api_key}"
 
@@ -18,8 +18,7 @@ def build_api_url(contract_city, api_key):
 def fetch_station_data(api_url):
     """
     :param api_url: The URL of the JCDecaux API endpoint to fetch station data from.
-    :return: The JSON response from the JCDecaux API if the request is successful.
-    :raises Exception: If the request to the JCDecaux API fails with a status code other than 200.
+    :return: The response data from the JCDecaux API in JSON format.
     """
     response = requests.get(api_url)
     if response.status_code != 200:
@@ -33,8 +32,10 @@ def fetch_station_data(api_url):
 
 def get_station_info(station_json):
     """
-    :param station_json: JSON object containing station information
-    :return: Dictionary with station details including number, name, latitude, longitude, status, capacity, available bikes, and available stands
+    :param station_json: JSON data representing station information
+    :type station_json: dict
+    :return: A dictionary with parsed station information including number, name, coordinates, status, capacity, available bikes, and available stands
+    :rtype: dict
     """
     return {
         "numero": station_json['number'],
@@ -50,9 +51,9 @@ def get_station_info(station_json):
 
 def get_stations(contract_city=DEFAULT_CONTRACT_CITY, api_key=API_KEY):
     """
-    :param contract_city: The city for which to retrieve the station information. Defaults to the value of DEFAULT_CONTRACT_CITY.
-    :param api_key: The API key used for authenticating with the external service. Defaults to the value of API_KEY.
-    :return: A list of station information, where each station's information is parsed from the JSON response.
+    :param contract_city: The name of the city for which to retrieve the bike stations.
+    :param api_key: The API key required for authenticating the request.
+    :return: A list of station information for the specified city.
     """
     api_url = build_api_url(contract_city, api_key)
     station_data = fetch_station_data(api_url)
