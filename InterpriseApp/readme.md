@@ -40,9 +40,9 @@ Navigate to the directory where the appBike.py file is located.
 
 Run the Streamlit application using the following command:
 
-bash
-Copy code
+```bash
 streamlit run appBike.py
+```
 Open the provided local URL in your web browser to view the app.
 
 Usage
