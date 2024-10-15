@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9874b234cda6a97a278e0b127ba06f0c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9874b234cda6a97a278e0b127ba06f0c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9874b234cda6a97a278e0b127ba06f0c = L.map(
+                "map_9874b234cda6a97a278e0b127ba06f0c",
+                {
+                    center: [48.6921, 6.1847],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f30ae77791b70f03396b37605099e0c4 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_f30ae77791b70f03396b37605099e0c4.addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var marker_b7a6f6a1b9c9de7bf469ea63486362d4 = L.marker(
+                [48.662356, 6.173442],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_91c9029b63ac83723d2a6ffe08eb60d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b7a6f6a1b9c9de7bf469ea63486362d4.setIcon(icon_91c9029b63ac83723d2a6ffe08eb60d1);
+        
+    
+        var popup_d1b9c91794ef9a76341fe49554cd5960 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7d97689c838f8cac22534a705a6a2e71 = $(`<div id="html_7d97689c838f8cac22534a705a6a2e71" style="width: 100.0%; height: 100.0%;">00030 - NATIONS</div>`)[0];
+                popup_d1b9c91794ef9a76341fe49554cd5960.setContent(html_7d97689c838f8cac22534a705a6a2e71);
+            
+        
+
+        marker_b7a6f6a1b9c9de7bf469ea63486362d4.bindPopup(popup_d1b9c91794ef9a76341fe49554cd5960)
+        ;
+
+        
+    
+    
+            var marker_e1a8311eaa478ff5bf16f0a920f7a7b5 = L.marker(
+                [48.666721193896, 6.16661978303466],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_2ede084f911cc2f2a0233ef13c6be133 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e1a8311eaa478ff5bf16f0a920f7a7b5.setIcon(icon_2ede084f911cc2f2a0233ef13c6be133);
+        
+    
+        var popup_66b469e5c67585002523d3f500686818 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aa392a7711fa5d6e69c688d2a1804cac = $(`<div id="html_aa392a7711fa5d6e69c688d2a1804cac" style="width: 100.0%; height: 100.0%;">00029 - VELODROME (CB)</div>`)[0];
+                popup_66b469e5c67585002523d3f500686818.setContent(html_aa392a7711fa5d6e69c688d2a1804cac);
+            
+        
+
+        marker_e1a8311eaa478ff5bf16f0a920f7a7b5.bindPopup(popup_66b469e5c67585002523d3f500686818)
+        ;
+
+        
+    
+    
+            var marker_53a5205de4e9d22550cf5e7d7dfe50d9 = L.marker(
+                [48.6924654452072, 6.18340055389445],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_78a5b09b25c7ee515c8497b66368495c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_53a5205de4e9d22550cf5e7d7dfe50d9.setIcon(icon_78a5b09b25c7ee515c8497b66368495c);
+        
+    
+        var popup_bcc9347a007e9bb74d9fc1c41690e700 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_87815308269bad5c2f4bd42617fc2d2b = $(`<div id="html_87815308269bad5c2f4bd42617fc2d2b" style="width: 100.0%; height: 100.0%;">00001 - DOMINICAINS - FOURIER (CB)</div>`)[0];
+                popup_bcc9347a007e9bb74d9fc1c41690e700.setContent(html_87815308269bad5c2f4bd42617fc2d2b);
+            
+        
+
+        marker_53a5205de4e9d22550cf5e7d7dfe50d9.bindPopup(popup_bcc9347a007e9bb74d9fc1c41690e700)
+        ;
+
+        
+    
+    
+            var marker_f3358d0d63796fc2bdb4e791e23a4f4d = L.marker(
+                [48.684954, 6.154908],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_692e9950c81b7317560614e557778d9d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_f3358d0d63796fc2bdb4e791e23a4f4d.setIcon(icon_692e9950c81b7317560614e557778d9d);
+        
+    
+        var popup_68e9f531115e48f279583f1092fbd779 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ca45c188d9a8fab4c1edd8a155f5ad92 = $(`<div id="html_ca45c188d9a8fab4c1edd8a155f5ad92" style="width: 100.0%; height: 100.0%;">00033 - LAXOU MAIRIE</div>`)[0];
+                popup_68e9f531115e48f279583f1092fbd779.setContent(html_ca45c188d9a8fab4c1edd8a155f5ad92);
+            
+        
+
+        marker_f3358d0d63796fc2bdb4e791e23a4f4d.bindPopup(popup_68e9f531115e48f279583f1092fbd779)
+        ;
+
+        
+    
+    
+            var marker_4dcd59da654426ba8cb7eea03505b289 = L.marker(
+                [48.695420147586, 6.19522861327582],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_c7fad453d44637ed9ea215e0d892456a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4dcd59da654426ba8cb7eea03505b289.setIcon(icon_c7fad453d44637ed9ea215e0d892456a);
+        
+    
+        var popup_651cb09d7b614f4b6f5425094753ab9f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_604b7e474774c5bc9d19864ae89164c0 = $(`<div id="html_604b7e474774c5bc9d19864ae89164c0" style="width: 100.0%; height: 100.0%;">00006 - LES 2 RIVES</div>`)[0];
+                popup_651cb09d7b614f4b6f5425094753ab9f.setContent(html_604b7e474774c5bc9d19864ae89164c0);
+            
+        
+
+        marker_4dcd59da654426ba8cb7eea03505b289.bindPopup(popup_651cb09d7b614f4b6f5425094753ab9f)
+        ;
+
+        
+    
+    
+            var marker_d8ac6a3dcff6ae4a20cbca01ba110143 = L.marker(
+                [48.6869197241039, 6.17234789239391],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_cb53911488be3871d6edc3429fb79f3d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d8ac6a3dcff6ae4a20cbca01ba110143.setIcon(icon_cb53911488be3871d6edc3429fb79f3d);
+        
+    
+        var popup_324e99670a2d84ed197eccc73081619f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7e033ee001e6e40e68e6283f2579149c = $(`<div id="html_7e033ee001e6e40e68e6283f2579149c" style="width: 100.0%; height: 100.0%;">00019 - COMMANDERIE - CHALNOT</div>`)[0];
+                popup_324e99670a2d84ed197eccc73081619f.setContent(html_7e033ee001e6e40e68e6283f2579149c);
+            
+        
+
+        marker_d8ac6a3dcff6ae4a20cbca01ba110143.bindPopup(popup_324e99670a2d84ed197eccc73081619f)
+        ;
+
+        
+    
+    
+            var marker_ffef0d89bd517735cf2c515622cbf159 = L.marker(
+                [48.6954870039528, 6.1906794896667],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_e4191ca3a6fc8225af688695ebe94fd1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_ffef0d89bd517735cf2c515622cbf159.setIcon(icon_e4191ca3a6fc8225af688695ebe94fd1);
+        
+    
+        var popup_09c6fa05341a17af297a0efc716d8da6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_56bb5ed83229cd24630434343cd2636a = $(`<div id="html_56bb5ed83229cd24630434343cd2636a" style="width: 100.0%; height: 100.0%;">00015 - PORT STE CATHERINE</div>`)[0];
+                popup_09c6fa05341a17af297a0efc716d8da6.setContent(html_56bb5ed83229cd24630434343cd2636a);
+            
+        
+
+        marker_ffef0d89bd517735cf2c515622cbf159.bindPopup(popup_09c6fa05341a17af297a0efc716d8da6)
+        ;
+
+        
+    
+    
+            var marker_ce9c517043238e1b7ee571e411127969 = L.marker(
+                [48.67227619793021, 6.165710709115886],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_7c439e402dcec0c3a74509d9b476e774 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ce9c517043238e1b7ee571e411127969.setIcon(icon_7c439e402dcec0c3a74509d9b476e774);
+        
+    
+        var popup_6202ab8ff9c486f35c4355719e50a976 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4a595b5605e72e3461461d088e891396 = $(`<div id="html_4a595b5605e72e3461461d088e891396" style="width: 100.0%; height: 100.0%;">00028 - MARCHÉ D'HAUSSONVILLE</div>`)[0];
+                popup_6202ab8ff9c486f35c4355719e50a976.setContent(html_4a595b5605e72e3461461d088e891396);
+            
+        
+
+        marker_ce9c517043238e1b7ee571e411127969.bindPopup(popup_6202ab8ff9c486f35c4355719e50a976)
+        ;
+
+        
+    
+    
+            var marker_f42fd80f642d3cb8daf2f9f5e14672e4 = L.marker(
+                [48.688015, 6.187451],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_4d1fa9a508dfbdafd2d9a0848ec85ac4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f42fd80f642d3cb8daf2f9f5e14672e4.setIcon(icon_4d1fa9a508dfbdafd2d9a0848ec85ac4);
+        
+    
+        var popup_9997e50076163a00031c730ebac21c13 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_451a144043adcb92ac2ec9349aeb6419 = $(`<div id="html_451a144043adcb92ac2ec9349aeb6419" style="width: 100.0%; height: 100.0%;">00013 - SAINT NICOLAS - CHARLES III</div>`)[0];
+                popup_9997e50076163a00031c730ebac21c13.setContent(html_451a144043adcb92ac2ec9349aeb6419);
+            
+        
+
+        marker_f42fd80f642d3cb8daf2f9f5e14672e4.bindPopup(popup_9997e50076163a00031c730ebac21c13)
+        ;
+
+        
+    
+    
+            var marker_a7ce8ca9c9d5ed5a5a88834e9b20c8dc = L.marker(
+                [48.6891733257851, 6.18390463043762],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_ae46d4472fa28e6967b72f7552d2fc2d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_a7ce8ca9c9d5ed5a5a88834e9b20c8dc.setIcon(icon_ae46d4472fa28e6967b72f7552d2fc2d);
+        
+    
+        var popup_8f98d0387ca27d99ff3eabb84247d4f3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8d8904cd1b9e05828731e4cb42eff8a7 = $(`<div id="html_8d8904cd1b9e05828731e4cb42eff8a7" style="width: 100.0%; height: 100.0%;">00004 - MARCHE CENTRAL (CB)</div>`)[0];
+                popup_8f98d0387ca27d99ff3eabb84247d4f3.setContent(html_8d8904cd1b9e05828731e4cb42eff8a7);
+            
+        
+
+        marker_a7ce8ca9c9d5ed5a5a88834e9b20c8dc.bindPopup(popup_8f98d0387ca27d99ff3eabb84247d4f3)
+        ;
+
+        
+    
+    
+            var marker_b63838d1c98c87f00a53d5446aab8599 = L.marker(
+                [48.689560111075, 6.17251545229862],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_1d27feeeaa4e8ca3850c0a420451af23 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_b63838d1c98c87f00a53d5446aab8599.setIcon(icon_1d27feeeaa4e8ca3850c0a420451af23);
+        
+    
+        var popup_fe5b6cd9cc741cf1e81c42ec52b8f573 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4855eeea5d140b08ee40316935b35f2f = $(`<div id="html_4855eeea5d140b08ee40316935b35f2f" style="width: 100.0%; height: 100.0%;">00018 - GARE SAINT LEON</div>`)[0];
+                popup_fe5b6cd9cc741cf1e81c42ec52b8f573.setContent(html_4855eeea5d140b08ee40316935b35f2f);
+            
+        
+
+        marker_b63838d1c98c87f00a53d5446aab8599.bindPopup(popup_fe5b6cd9cc741cf1e81c42ec52b8f573)
+        ;
+
+        
+    
+    
+            var marker_6f4d8c84a2c6aee6f9fe4b76feb8eece = L.marker(
+                [48.684141, 6.176525],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_fa913a81c56cc1d5570b53f4d2e032cf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_6f4d8c84a2c6aee6f9fe4b76feb8eece.setIcon(icon_fa913a81c56cc1d5570b53f4d2e032cf);
+        
+    
+        var popup_e78373bc8e62f0e8b62cb90003377255 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4abbbdba29dcf4011849c14f3d3e9886 = $(`<div id="html_4abbbdba29dcf4011849c14f3d3e9886" style="width: 100.0%; height: 100.0%;">00035 - MON DESERT</div>`)[0];
+                popup_e78373bc8e62f0e8b62cb90003377255.setContent(html_4abbbdba29dcf4011849c14f3d3e9886);
+            
+        
+
+        marker_6f4d8c84a2c6aee6f9fe4b76feb8eece.bindPopup(popup_e78373bc8e62f0e8b62cb90003377255)
+        ;
+
+        
+    
+    
+            var marker_3ffa0e77a0efe1c6cf7969225ff94cc3 = L.marker(
+                [48.6886141256403, 6.17950010441818],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_ad9be4a0cc1c531f1d8da982edb895ae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_3ffa0e77a0efe1c6cf7969225ff94cc3.setIcon(icon_ad9be4a0cc1c531f1d8da982edb895ae);
+        
+    
+        var popup_808149b159eda70af2df47eb1b05bfa3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8544bf52f8ccc63857e2007974045cb0 = $(`<div id="html_8544bf52f8ccc63857e2007974045cb0" style="width: 100.0%; height: 100.0%;">00012 - ST SEBASTIEN - ST THIEBAUT</div>`)[0];
+                popup_808149b159eda70af2df47eb1b05bfa3.setContent(html_8544bf52f8ccc63857e2007974045cb0);
+            
+        
+
+        marker_3ffa0e77a0efe1c6cf7969225ff94cc3.bindPopup(popup_808149b159eda70af2df47eb1b05bfa3)
+        ;
+
+        
+    
+    
+            var marker_b95f3b2ca7111e91a151c5de24bfdea9 = L.marker(
+                [48.6858574026886, 6.19290171469907],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_d5cb3b98f8af2cbc263fa5932b414bf0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b95f3b2ca7111e91a151c5de24bfdea9.setIcon(icon_d5cb3b98f8af2cbc263fa5932b414bf0);
+        
+    
+        var popup_67899f686ccd855b7f35915f0e9b46d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_febe111538cc337c1c016b0e1eda21a2 = $(`<div id="html_febe111538cc337c1c016b0e1eda21a2" style="width: 100.0%; height: 100.0%;">00022 - HOPITAL ST JULIEN</div>`)[0];
+                popup_67899f686ccd855b7f35915f0e9b46d6.setContent(html_febe111538cc337c1c016b0e1eda21a2);
+            
+        
+
+        marker_b95f3b2ca7111e91a151c5de24bfdea9.bindPopup(popup_67899f686ccd855b7f35915f0e9b46d6)
+        ;
+
+        
+    
+    
+            var marker_9a8bc6a69e1c4f4af19d0bc8407fb88b = L.marker(
+                [48.6833502130976, 6.19029660801914],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_804a98976f09aba9a28dc96a31a95c86 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9a8bc6a69e1c4f4af19d0bc8407fb88b.setIcon(icon_804a98976f09aba9a28dc96a31a95c86);
+        
+    
+        var popup_6ef0e984ffff93599d44ff908cd9b4ee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7e44e75ec00118d6e222ef2226dc67a3 = $(`<div id="html_7e44e75ec00118d6e222ef2226dc67a3" style="width: 100.0%; height: 100.0%;">00021 - HOPITAL CENTRAL</div>`)[0];
+                popup_6ef0e984ffff93599d44ff908cd9b4ee.setContent(html_7e44e75ec00118d6e222ef2226dc67a3);
+            
+        
+
+        marker_9a8bc6a69e1c4f4af19d0bc8407fb88b.bindPopup(popup_6ef0e984ffff93599d44ff908cd9b4ee)
+        ;
+
+        
+    
+    
+            var marker_2ce93d419c884bb0decf7809dcf88a18 = L.marker(
+                [48.6921301, 6.1872695],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_eaede29286fd12c1a56cee12e8bf16d0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2ce93d419c884bb0decf7809dcf88a18.setIcon(icon_eaede29286fd12c1a56cee12e8bf16d0);
+        
+    
+        var popup_70e95eb8701e4af129a5449c98e614b4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a71e64617387be2e32df905708975ae8 = $(`<div id="html_a71e64617387be2e32df905708975ae8" style="width: 100.0%; height: 100.0%;">00005 - PLACE COLONEL DRIANT</div>`)[0];
+                popup_70e95eb8701e4af129a5449c98e614b4.setContent(html_a71e64617387be2e32df905708975ae8);
+            
+        
+
+        marker_2ce93d419c884bb0decf7809dcf88a18.bindPopup(popup_70e95eb8701e4af129a5449c98e614b4)
+        ;
+
+        
+    
+    
+            var marker_c2858eaefb8f97e55afac107d4b5ebd7 = L.marker(
+                [48.6928180794454, 6.16860978784457],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_9758d351805efe2fee766443d549705e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_c2858eaefb8f97e55afac107d4b5ebd7.setIcon(icon_9758d351805efe2fee766443d549705e);
+        
+    
+        var popup_4f32097fddf95d5219a9b275c2b1ac7e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b3b422379c67b4ee4bc483332ea04611 = $(`<div id="html_b3b422379c67b4ee4bc483332ea04611" style="width: 100.0%; height: 100.0%;">00014 - FAC DE LETTRES</div>`)[0];
+                popup_4f32097fddf95d5219a9b275c2b1ac7e.setContent(html_b3b422379c67b4ee4bc483332ea04611);
+            
+        
+
+        marker_c2858eaefb8f97e55afac107d4b5ebd7.bindPopup(popup_4f32097fddf95d5219a9b275c2b1ac7e)
+        ;
+
+        
+    
+    
+            var marker_9c8757776d1f0a677eb6204b6ab87376 = L.marker(
+                [48.6984724451821, 6.17798553705909],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_4b1e97e389b9414acbfc17f033874f5a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_9c8757776d1f0a677eb6204b6ab87376.setIcon(icon_4b1e97e389b9414acbfc17f033874f5a);
+        
+    
+        var popup_01c88fe26cd19c6333760d326188a30a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2825a35df0b268cce0c7d22cb26861b5 = $(`<div id="html_2825a35df0b268cce0c7d22cb26861b5" style="width: 100.0%; height: 100.0%;">00016 - PORTE DE LA CRAFFE</div>`)[0];
+                popup_01c88fe26cd19c6333760d326188a30a.setContent(html_2825a35df0b268cce0c7d22cb26861b5);
+            
+        
+
+        marker_9c8757776d1f0a677eb6204b6ab87376.bindPopup(popup_01c88fe26cd19c6333760d326188a30a)
+        ;
+
+        
+    
+    
+            var marker_46f550fbcca5beaf8e7fe3ae1cf767b1 = L.marker(
+                [48.6995023285111, 6.20473563987354],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_059527f607cd0529e7c4828f5918201f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_46f550fbcca5beaf8e7fe3ae1cf767b1.setIcon(icon_059527f607cd0529e7c4828f5918201f);
+        
+    
+        var popup_5b72dd1e71f838b782ab44867ccb8c79 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_deceaea3d7e855d919695e240a4de746 = $(`<div id="html_deceaea3d7e855d919695e240a4de746" style="width: 100.0%; height: 100.0%;">00009 - PLACE BARROIS</div>`)[0];
+                popup_5b72dd1e71f838b782ab44867ccb8c79.setContent(html_deceaea3d7e855d919695e240a4de746);
+            
+        
+
+        marker_46f550fbcca5beaf8e7fe3ae1cf767b1.bindPopup(popup_5b72dd1e71f838b782ab44867ccb8c79)
+        ;
+
+        
+    
+    
+            var marker_c37cc27ce346bb7d243cbeabd6f5bd05 = L.marker(
+                [48.680516, 6.181811],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_2ae486f5f863bcfd1a3646984e90f078 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_c37cc27ce346bb7d243cbeabd6f5bd05.setIcon(icon_2ae486f5f863bcfd1a3646984e90f078);
+        
+    
+        var popup_715d08da676161a8b59faaeb0e3883f9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff48266a0ab80ad389176636ab3a7ed1 = $(`<div id="html_ff48266a0ab80ad389176636ab3a7ed1" style="width: 100.0%; height: 100.0%;">00036 - SAURUPT</div>`)[0];
+                popup_715d08da676161a8b59faaeb0e3883f9.setContent(html_ff48266a0ab80ad389176636ab3a7ed1);
+            
+        
+
+        marker_c37cc27ce346bb7d243cbeabd6f5bd05.bindPopup(popup_715d08da676161a8b59faaeb0e3883f9)
+        ;
+
+        
+    
+    
+            var marker_b62a2eae911b440e343b9f3edbc1d2be = L.marker(
+                [48.707187, 6.185524],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_7144852c5ba873d18dc2e2ab5c7c77f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b62a2eae911b440e343b9f3edbc1d2be.setIcon(icon_7144852c5ba873d18dc2e2ab5c7c77f3);
+        
+    
+        var popup_849e0cb59159575bdb1b7562866b6956 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9451000ba9f148224d70d769b5fca6a3 = $(`<div id="html_9451000ba9f148224d70d769b5fca6a3" style="width: 100.0%; height: 100.0%;">00034 - MALZEVILLE</div>`)[0];
+                popup_849e0cb59159575bdb1b7562866b6956.setContent(html_9451000ba9f148224d70d769b5fca6a3);
+            
+        
+
+        marker_b62a2eae911b440e343b9f3edbc1d2be.bindPopup(popup_849e0cb59159575bdb1b7562866b6956)
+        ;
+
+        
+    
+    
+            var marker_dd222820eb84ff3eed6de49f4231d2b5 = L.marker(
+                [48.6919579483934, 6.17851021950761],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_b4febfc1862764e4c59deaf730a7fc2c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_dd222820eb84ff3eed6de49f4231d2b5.setIcon(icon_b4febfc1862764e4c59deaf730a7fc2c);
+        
+    
+        var popup_6c92855d358c2dccb4a14c2b814318c0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_40b9f661f9af2d03c110b3133fe3a9f6 = $(`<div id="html_40b9f661f9af2d03c110b3133fe3a9f6" style="width: 100.0%; height: 100.0%;">00003 - PLACE DE DOMBASLE</div>`)[0];
+                popup_6c92855d358c2dccb4a14c2b814318c0.setContent(html_40b9f661f9af2d03c110b3133fe3a9f6);
+            
+        
+
+        marker_dd222820eb84ff3eed6de49f4231d2b5.bindPopup(popup_6c92855d358c2dccb4a14c2b814318c0)
+        ;
+
+        
+    
+    
+            var marker_1d946ae7c21488243cddfd1a4cf428a1 = L.marker(
+                [48.675248491826174, 6.162844844269929],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_1d0b1ac3f83471b1f4d7f34f30b49421 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1d946ae7c21488243cddfd1a4cf428a1.setIcon(icon_1d0b1ac3f83471b1f4d7f34f30b49421);
+        
+    
+        var popup_76c4d2e930fd412fee16a321d78f8c97 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_097216289caa589bf68053f18d35dbd5 = $(`<div id="html_097216289caa589bf68053f18d35dbd5" style="width: 100.0%; height: 100.0%;">00026 - BAUDRICOURT HAUSSONVILLE</div>`)[0];
+                popup_76c4d2e930fd412fee16a321d78f8c97.setContent(html_097216289caa589bf68053f18d35dbd5);
+            
+        
+
+        marker_1d946ae7c21488243cddfd1a4cf428a1.bindPopup(popup_76c4d2e930fd412fee16a321d78f8c97)
+        ;
+
+        
+    
+    
+            var marker_836a40c71867e59ab04b840ef1b9b59e = L.marker(
+                [48.701365, 6.176824],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_b8f9c281f46302a07b79f193c7ec034f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_836a40c71867e59ab04b840ef1b9b59e.setIcon(icon_b8f9c281f46302a07b79f193c7ec034f);
+        
+    
+        var popup_88749b0d5ff88d8c09374783d71fe5a8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2e70231554bae6e3204b754f6e728a14 = $(`<div id="html_2e70231554bae6e3204b754f6e728a14" style="width: 100.0%; height: 100.0%;">00024 - 3 MAISONS - CHARLES V (CB)</div>`)[0];
+                popup_88749b0d5ff88d8c09374783d71fe5a8.setContent(html_2e70231554bae6e3204b754f6e728a14);
+            
+        
+
+        marker_836a40c71867e59ab04b840ef1b9b59e.bindPopup(popup_88749b0d5ff88d8c09374783d71fe5a8)
+        ;
+
+        
+    
+    
+            var marker_7fa1a6d77684f6223842526890f3af62 = L.marker(
+                [48.6927939742599, 6.19628435757015],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_844bef3f3bd414e2a51b5c791e298fea = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_7fa1a6d77684f6223842526890f3af62.setIcon(icon_844bef3f3bd414e2a51b5c791e298fea);
+        
+    
+        var popup_692f4e2792cf85bfc874d6977e56b5be = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b497e72537560624e9c7312587e086dc = $(`<div id="html_b497e72537560624e9c7312587e086dc" style="width: 100.0%; height: 100.0%;">00023 - PROMENADE DES CANAUX</div>`)[0];
+                popup_692f4e2792cf85bfc874d6977e56b5be.setContent(html_b497e72537560624e9c7312587e086dc);
+            
+        
+
+        marker_7fa1a6d77684f6223842526890f3af62.bindPopup(popup_692f4e2792cf85bfc874d6977e56b5be)
+        ;
+
+        
+    
+    
+            var marker_94ef1cb80ec4ef2d3fe7a5034ff577ba = L.marker(
+                [48.6952351, 6.1798109],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_4f528bc27dee9914b17809f7697b7b4e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_94ef1cb80ec4ef2d3fe7a5034ff577ba.setIcon(icon_4f528bc27dee9914b17809f7697b7b4e);
+        
+    
+        var popup_957c44a392a1e07667a9ba72356394ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f212124aac8467988b3ec72417dbbfae = $(`<div id="html_f212124aac8467988b3ec72417dbbfae" style="width: 100.0%; height: 100.0%;">00007 - PLACE ST EPVRE</div>`)[0];
+                popup_957c44a392a1e07667a9ba72356394ba.setContent(html_f212124aac8467988b3ec72417dbbfae);
+            
+        
+
+        marker_94ef1cb80ec4ef2d3fe7a5034ff577ba.bindPopup(popup_957c44a392a1e07667a9ba72356394ba)
+        ;
+
+        
+    
+    
+            var marker_c4a539217189927cf272c0f37250c453 = L.marker(
+                [48.685497, 6.161015],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_611de34b5ba85054b812eb5ebb65af41 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c4a539217189927cf272c0f37250c453.setIcon(icon_611de34b5ba85054b812eb5ebb65af41);
+        
+    
+        var popup_fceff87dad7d3d977712b3ad732abd52 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b52ccd0535ce9af9c089124c72f08ca = $(`<div id="html_4b52ccd0535ce9af9c089124c72f08ca" style="width: 100.0%; height: 100.0%;">00032 - MEDREVILLE</div>`)[0];
+                popup_fceff87dad7d3d977712b3ad732abd52.setContent(html_4b52ccd0535ce9af9c089124c72f08ca);
+            
+        
+
+        marker_c4a539217189927cf272c0f37250c453.bindPopup(popup_fceff87dad7d3d977712b3ad732abd52)
+        ;
+
+        
+    
+    
+            var marker_9d3cb435a5e92c1f5bef7f7faba69c6c = L.marker(
+                [48.684781, 6.187631],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_d95da7c571b489c37d44537438ae7430 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9d3cb435a5e92c1f5bef7f7faba69c6c.setIcon(icon_d95da7c571b489c37d44537438ae7430);
+        
+    
+        var popup_e1b1646bdd39b96b76683f1aa923eef3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5d0727ffe37736ab6a37cd7d0c40c088 = $(`<div id="html_5d0727ffe37736ab6a37cd7d0c40c088" style="width: 100.0%; height: 100.0%;">00020 - PLACE DES VOSGES</div>`)[0];
+                popup_e1b1646bdd39b96b76683f1aa923eef3.setContent(html_5d0727ffe37736ab6a37cd7d0c40c088);
+            
+        
+
+        marker_9d3cb435a5e92c1f5bef7f7faba69c6c.bindPopup(popup_e1b1646bdd39b96b76683f1aa923eef3)
+        ;
+
+        
+    
+    
+            var marker_c19e68e97c4bfa0b0947c6d354be320c = L.marker(
+                [48.691291, 6.190844],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_742b1ad70a2932239150ff085edfd80a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c19e68e97c4bfa0b0947c6d354be320c.setIcon(icon_742b1ad70a2932239150ff085edfd80a);
+        
+    
+        var popup_126e91f0d8921fd6c21a778816fec72e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d073882dec24ec30a742c01529a633e3 = $(`<div id="html_d073882dec24ec30a742c01529a633e3" style="width: 100.0%; height: 100.0%;">00037 - JARDINIERS - TIERCELINS</div>`)[0];
+                popup_126e91f0d8921fd6c21a778816fec72e.setContent(html_d073882dec24ec30a742c01529a633e3);
+            
+        
+
+        marker_c19e68e97c4bfa0b0947c6d354be320c.bindPopup(popup_126e91f0d8921fd6c21a778816fec72e)
+        ;
+
+        
+    
+    
+            var marker_35aead48752e1330042dc58d3561a889 = L.marker(
+                [48.674665, 6.170655],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_bf8794490a5da4a9a474324ae2137062 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_35aead48752e1330042dc58d3561a889.setIcon(icon_bf8794490a5da4a9a474324ae2137062);
+        
+    
+        var popup_e9a766f4c44d52cbb998de7208ffc625 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4352230eee99ac8f8d7fee54bf749ceb = $(`<div id="html_4352230eee99ac8f8d7fee54bf749ceb" style="width: 100.0%; height: 100.0%;">00031 - ARTEM</div>`)[0];
+                popup_e9a766f4c44d52cbb998de7208ffc625.setContent(html_4352230eee99ac8f8d7fee54bf749ceb);
+            
+        
+
+        marker_35aead48752e1330042dc58d3561a889.bindPopup(popup_e9a766f4c44d52cbb998de7208ffc625)
+        ;
+
+        
+    
+    
+            var marker_bcbe868dfebe448aec62ccd968ce65e3 = L.marker(
+                [48.6956140662607, 6.17676840786255],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_278ef4fa2c4240ec8faa74b54d795f9c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_bcbe868dfebe448aec62ccd968ce65e3.setIcon(icon_278ef4fa2c4240ec8faa74b54d795f9c);
+        
+    
+        var popup_d9408a8ea4ad7c26aefa8074bc227d4f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_225a55a3b3bf5130703e63736778ae2a = $(`<div id="html_225a55a3b3bf5130703e63736778ae2a" style="width: 100.0%; height: 100.0%;">00008 - COURS LEOPOLD - SAINT MICHEL</div>`)[0];
+                popup_d9408a8ea4ad7c26aefa8074bc227d4f.setContent(html_225a55a3b3bf5130703e63736778ae2a);
+            
+        
+
+        marker_bcbe868dfebe448aec62ccd968ce65e3.bindPopup(popup_d9408a8ea4ad7c26aefa8074bc227d4f)
+        ;
+
+        
+    
+    
+            var marker_ec16925581f52298410c8a5dba2f2428 = L.marker(
+                [48.69037, 6.175677],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_0b8ee14558bae144c883f8f6249811f9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ec16925581f52298410c8a5dba2f2428.setIcon(icon_0b8ee14558bae144c883f8f6249811f9);
+        
+    
+        var popup_d4e48c3f312ff5eb5cd16ae2200a26ce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0f81fa8ceef88e1545bb596e6883b734 = $(`<div id="html_0f81fa8ceef88e1545bb596e6883b734" style="width: 100.0%; height: 100.0%;">00010 - GARE THIERS (CB)</div>`)[0];
+                popup_d4e48c3f312ff5eb5cd16ae2200a26ce.setContent(html_0f81fa8ceef88e1545bb596e6883b734);
+            
+        
+
+        marker_ec16925581f52298410c8a5dba2f2428.bindPopup(popup_d4e48c3f312ff5eb5cd16ae2200a26ce)
+        ;
+
+        
+    
+    
+            var marker_cc76e3ecc91bf17b55e7e1a8aff4e4c1 = L.marker(
+                [48.6945981637388, 6.18229408637817],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_c63874bf44453bb76eee341df9e5d364 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_cc76e3ecc91bf17b55e7e1a8aff4e4c1.setIcon(icon_c63874bf44453bb76eee341df9e5d364);
+        
+    
+        var popup_7c06ed21c2860fd161bcd64df39a1403 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4dc66b6aba93a8dba2d33672e8e504cd = $(`<div id="html_4dc66b6aba93a8dba2d33672e8e504cd" style="width: 100.0%; height: 100.0%;">00002 - PLACE DE LA CARRIERE</div>`)[0];
+                popup_7c06ed21c2860fd161bcd64df39a1403.setContent(html_4dc66b6aba93a8dba2d33672e8e504cd);
+            
+        
+
+        marker_cc76e3ecc91bf17b55e7e1a8aff4e4c1.bindPopup(popup_7c06ed21c2860fd161bcd64df39a1403)
+        ;
+
+        
+    
+    
+            var marker_ab765fe358ad39ae9807e007614b1829 = L.marker(
+                [48.6859179816784, 6.1674218161464],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_c3fdfa48d8ac404a225dba06e1986481 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ab765fe358ad39ae9807e007614b1829.setIcon(icon_c3fdfa48d8ac404a225dba06e1986481);
+        
+    
+        var popup_07fd7d25f9533418f495634d0b41b8b9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1831b939477b424586804b996f58aaea = $(`<div id="html_1831b939477b424586804b996f58aaea" style="width: 100.0%; height: 100.0%;">00025 - PLACE COMMANDERIE</div>`)[0];
+                popup_07fd7d25f9533418f495634d0b41b8b9.setContent(html_1831b939477b424586804b996f58aaea);
+            
+        
+
+        marker_ab765fe358ad39ae9807e007614b1829.bindPopup(popup_07fd7d25f9533418f495634d0b41b8b9)
+        ;
+
+        
+    
+    
+            var marker_bd9c331f45ca590d6b51e2e3bf3a6123 = L.marker(
+                [48.6957176856775, 6.17133838702303],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_30d53b56affa0ec3a920a667089328f2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_bd9c331f45ca590d6b51e2e3bf3a6123.setIcon(icon_30d53b56affa0ec3a920a667089328f2);
+        
+    
+        var popup_8d3687cf42f61f69cc5b60331066dd6b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dcb71ddfd3e7747bd611b9db295e7b15 = $(`<div id="html_dcb71ddfd3e7747bd611b9db295e7b15" style="width: 100.0%; height: 100.0%;">00017 - CONSERVATOIRE - MANUFACTURE</div>`)[0];
+                popup_8d3687cf42f61f69cc5b60331066dd6b.setContent(html_dcb71ddfd3e7747bd611b9db295e7b15);
+            
+        
+
+        marker_bd9c331f45ca590d6b51e2e3bf3a6123.bindPopup(popup_8d3687cf42f61f69cc5b60331066dd6b)
+        ;
+
+        
+    
+    
+            var marker_44b7f6804f81d945798fd3ed58b507eb = L.marker(
+                [48.679501, 6.167344],
+                {}
+            ).addTo(map_9874b234cda6a97a278e0b127ba06f0c);
+        
+    
+            var icon_16027c7817c88bbe4de43f58b4e88606 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_44b7f6804f81d945798fd3ed58b507eb.setIcon(icon_16027c7817c88bbe4de43f58b4e88606);
+        
+    
+        var popup_d83f8ea1ab00619d627ffa8c845cdd82 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f85fc1d43668ca084033d42915177bf2 = $(`<div id="html_f85fc1d43668ca084033d42915177bf2" style="width: 100.0%; height: 100.0%;">00027 - NANCY THERMAL (CB)</div>`)[0];
+                popup_d83f8ea1ab00619d627ffa8c845cdd82.setContent(html_f85fc1d43668ca084033d42915177bf2);
+            
+        
+
+        marker_44b7f6804f81d945798fd3ed58b507eb.bindPopup(popup_d83f8ea1ab00619d627ffa8c845cdd82)
+        ;
+
+        
+    
+</script>
+</html>
