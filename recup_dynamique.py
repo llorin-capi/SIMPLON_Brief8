@@ -5,6 +5,7 @@ from services import jcdecaux as jcd
 def recup_stations():
     url=jcd.api_base_url + "stations?contract="+ jcd.contrat + "&apiKey=" + jcd.key
     response = requests.get(url)
+    response.encoding = response.apparent_encoding
     if response.status_code == 200:
         stations=[]
         for stat_station in response.json() :
