@@ -28,9 +28,6 @@
             <mxPoint x="452.5" y="345" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ebvQ4PRXDrvII4Sk1De--8" value="OSMnx&lt;br&gt;Folium" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="384" y="400" width="60" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="ebvQ4PRXDrvII4Sk1De--9" value="API&lt;div&gt;jcdecaux&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="-220" y="300" width="80" height="80" as="geometry" />
         </mxCell>
