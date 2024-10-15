@@ -15,7 +15,9 @@ L'objectif de ce projet est de  développer une interface interactive pour visua
 
 ## Résultat
 
-
+## Documentation
+* [Formulation du problème et critères d'optimisation](problem formulation.pdf)
+* 
 ## Auteurs
 * Darya Filatova (@delnouty)
 * Léa Lorin (@llorin-capi)
