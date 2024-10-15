@@ -7,13 +7,16 @@ L'objectif de ce projet est de  développer une interface interactive pour visua
 ![diagramme](diagramme.png)
 
 ##  Pré-requis
-* Python 3.12.6, avec les librairies du fichier [requirements](requirements.txt) installées
+* Python 3.12.6
 
 ## Instructions
-* Exécuter le script carte-interactive.py
-* Ouvrir le fichier map-nancy.html dans un navigateur
+* Importer les librairies contenues dans [requirements](requirements.txt)
+* Dans un terminal, exécuter le fichier appBike.py grâce à la commande :
+> streamlit run InterpriseApp/appBike.py
+* Ctrl+click sur le premier lien obtenu dans le terminal
 
 ## Résultat
+![résultat](resultat_exemple.png)
 
 ## Documentation
 * [Formulation du problème](problem_formulation.pdf)
