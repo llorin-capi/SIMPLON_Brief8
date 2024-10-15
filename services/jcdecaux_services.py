@@ -1,4 +1,5 @@
 import requests
+import re
 
 API_VERSION = 3
 API_BASE_URL = f"https://api.jcdecaux.com/vls/v{API_VERSION}/"
@@ -39,7 +40,7 @@ def get_station_info(station_json):
     """
     return {
         "numero": station_json['number'],
-        "nom": station_json['name'],
+        "nom": re.sub(r'[\d-]', '', station_json['name']).strip(),
         "latitude": station_json['position']['latitude'],
         "longitude": station_json['position']['longitude'],
         "statut": station_json['status'],
