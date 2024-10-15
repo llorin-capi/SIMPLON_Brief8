@@ -4,7 +4,7 @@
 L'objectif de ce projet est de  développer une interface interactive pour visualiser et optimiser l'utilisation des stations de vélos partagés à Nancy, en intégrant des données en temps réel et en proposant un système de récompenses pour encourager le rééquilibrage des vélos aux stations par les utilisateurs.
 
 ## Modélisation de la solution
-![raw svg](diagramme.drawio.svg)
+![raw svg](diagramme.svg)
 ![raw svg](path/to/your/diagram.svg)
 
 ##  Pré-requis
