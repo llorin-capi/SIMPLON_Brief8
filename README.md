@@ -17,7 +17,7 @@ L'objectif de ce projet est de  développer une interface interactive pour visua
 
 
 ## Auteurs
-* Daria
+* Darya Filatova (@delnouty)
 * Léa Lorin (@llorin-capi)
 * Théo Virbel (@Theo-virbel)
 * Serge Pfeiffer (@DahliaNoir71)
