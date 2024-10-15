@@ -1,5 +1,7 @@
 from services import jcdecaux_services as jcds
 from services import maps_services as maps
+from flask import Flask, render_template
+from services.routes_services import register_routes
 
 DEFAULT_COUNTRY = "France"
 
@@ -44,6 +46,10 @@ def add_station_locations_to_map(map_object, stations):
     """
     maps.add_locations_to_map(map_object, stations)
 
+app = Flask(__name__)
+
+register_routes(app)
+
 
 if __name__ == '__main__':
-    fetch_and_map_stations()
+    app.run(debug=True)
