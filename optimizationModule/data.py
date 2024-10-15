@@ -1,91 +1,91 @@
 import pandas as pd
 import requests
-import re  # Для использования регулярных выражений
+import re  # For using regular expressions
 
-# API key, contract and base URL
+# API key, contract, and base URL
 key = "e1d3b29a83a779db2a3c2d64d1d5a255c7560a27"
-contrat = "nancy"
+contract = "nancy"
 api_base_url = "https://api.jcdecaux.com/vls/v3/"
 
-# Функция для очистки названия (удаление цифр, дефисов, пробелов, "CB" и лишних символов)
+# Function to clean the station name (remove digits, hyphens, "CB", and extra characters)
 def clean_name(name):
-    # Удаление "CB", цифр, дефисов и лишних пробелов
-    cleaned_name = re.sub(r'\bCB\b|[\d-]', '', name)  # Удаляем "CB", цифры и дефисы
-    cleaned_name = re.sub(r'[\(\)\[\]\{\}]', '', cleaned_name)  # Удаляем круглые и квадратные скобки
-    cleaned_name = re.sub(r'\s+', ' ', cleaned_name).strip()  # Убираем лишние пробелы
+    # Remove "CB", digits, hyphens, and extra spaces
+    cleaned_name = re.sub(r'\bCB\b|[\d-]', '', name)  # Remove "CB", digits, and hyphens
+    cleaned_name = re.sub(r'[\(\)\[\]\{\}]', '', cleaned_name)  # Remove parentheses and brackets
+    cleaned_name = re.sub(r'\s+', ' ', cleaned_name).strip()  # Remove extra spaces
     return cleaned_name
 
-# Функция для очистки данных
-def nettoyer_donnees(stations):
+# Function to clean data
+def clean_data(stations):
     cleaned_stations = []
     for station in stations:
-        # Проверка на наличие всех ключевых данных
+        # Check for the presence of all necessary data
         if (station["Address"] and station["Latitude"] and station["Longitude"] and
             station["Station"] and station["Station_ID"] is not None and
             station["CurNumberOfBikes"] is not None and station["MaxNumberOfBikes"] is not None):
             
-            # Проверка на корректность данных (например, latitude и longitude должны быть числами)
+            # Check data validity (e.g., latitude and longitude must be numbers)
             try:
                 station["Latitude"] = float(station["Latitude"])
                 station["Longitude"] = float(station["Longitude"])
                 station["CurNumberOfBikes"] = int(station["CurNumberOfBikes"])
                 station["MaxNumberOfBikes"] = int(station["MaxNumberOfBikes"])
 
-                # Очистка названия станции и адреса
+                # Clean station name and address
                 station["Station"] = clean_name(station["Station"])
                 station["Address"] = clean_name(station["Address"])
 
-                cleaned_stations.append(station)  # Добавляем станцию, если все ок
+                cleaned_stations.append(station)  # Add the station if everything is okay
             except ValueError:
-                # Если данные не приводятся к нужным типам, станция игнорируется
-                print(f"Ошибка преобразования данных для станции {station['Station']}")
+                # If data cannot be converted to the required types, ignore the station
+                print(f"Error converting data for station {station['Station']}")
     return cleaned_stations
 
-# Основная функция для получения данных и их очистки
-def recup_stations():
-    url = f"{api_base_url}stations?contract={contrat}&apiKey={key}"
+# Main function to retrieve data and clean it
+def retrieve_stations():
+    url = f"{api_base_url}stations?contract={contract}&apiKey={key}"
     response = requests.get(url)
 
-    # Обеспечить правильную кодировку
+    # Ensure correct encoding
     response.encoding = response.apparent_encoding
 
     if response.status_code == 200:
         stations = []
         for stat_station in response.json():
-            # Создаем структуру согласно формату CSV файла
+            # Create a structure according to the CSV file format
             station = {
-                "Address": stat_station['name'],  # Предполагаем, что 'name' это адрес
+                "Address": stat_station['name'],  # Assuming 'name' is the address
                 "Latitude": stat_station['position']['latitude'],
                 "Longitude": stat_station['position']['longitude'],
-                "Station": stat_station['name'],  # Имя станции
-                "CB": None,  # Место для данных по CB (может быть, стоит собрать дополнительные данные позже)
-                "Station_ID": stat_station['number'],  # Номер станции как ID
+                "Station": stat_station['name'],  # Name of the station
+                "CB": None,  # Placeholder for CB data (might consider gathering additional data later)
+                "Station_ID": stat_station['number'],  # Station number as ID
                 "CurNumberOfBikes": stat_station['mainStands']['availabilities']['bikes'],
                 "MaxNumberOfBikes": stat_station['mainStands']['capacity']
             }
             stations.append(station)
 
-        # Чистим данные перед созданием DataFrame
-        stations_cleaned = nettoyer_donnees(stations)
+        # Clean the data before creating DataFrame
+        stations_cleaned = clean_data(stations)
 
-        # Создаем DataFrame
+        # Create DataFrame
         df_stations = pd.DataFrame(stations_cleaned, columns=[
             "Address", "Latitude", "Longitude", "Station", "CB", 
             "Station_ID", "CurNumberOfBikes", "MaxNumberOfBikes"
         ])
         
-        # Сохраняем DataFrame в CSV файл
+        # Save DataFrame to a CSV file
         df_stations.to_csv('./data/data_statique_clean01.csv', index=False)
-        print("Данные успешно сохранены в './data/data_statique_clean01.csv'.")
+        print("Data successfully saved to './data/data_statique_clean01.csv'.")
 
         return df_stations
     else:
-        print("Ошибка:", response.status_code)
+        print("Error:", response.status_code)
         return None
 
-# Пример использования функции
-df_stations = recup_stations()
+# Example of using the function
+df_stations = retrieve_stations()
 
-# Вывод первых строк для проверки
+# Output the first few rows for verification
 if df_stations is not None:
     print(df_stations.head())
