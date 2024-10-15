@@ -52,6 +52,6 @@ Rerun Optimization: Use the "Rerun Optimization" button to refresh the data and 
 Legend
 The map includes a legend to indicate:
 
-Red Marker: Destination for bike deliveries.
-Blue Marker: Station not receiving bikes.
-Green Marker: Transfer destination.
+* Red Marker: Destination for bike deliveries.
+* Blue Marker: Station not receiving bikes.
+* Green Marker: Transfer destination.
